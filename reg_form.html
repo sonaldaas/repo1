@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 50px;
+}
+</style>
+</head>
+
+<script type="text/javascript">
+function validation()
+{
+var a = document.form.name.value;
+if(a=="")
+{
+alert("Please Enter User Name");
+
+
+document.form.name.focus();
+return false;
+}
+if(!isNaN(a))
+{
+alert("Please Enter Only Characters in User name");
+document.form.name.select();
+return false;
+}
+if ((a.length < 5) || (a.length > 15))
+{
+alert("User_name Character must be 5 to 15 Character");
+document.form.name.select();
+return false;
+}
+
+
+//password validation
+var b = document.form.pass.value;
+if(b=="")
+{
+alert("Please Enter Your Password");
+document.form.pass.focus();
+return false;
+
+}
+if ((b.length < 4) || (b.length > 8))
+{
+alert("Your Password must be 4 to 8 Character");
+document.form.pass.select();
+return false;
+}
+
+
+//email Validation
+var email = document.form.Email;
+if (email.value == "")
+{
+alert("Please enter a valid e-mail address.");
+email.focus();
+return false;
+}
+if (email.value.indexOf("@", 0) < 0)
+{
+alert("Please enter a valid e-mail address.");
+email.focus();
+email.value="";
+return false;
+}
+if (email.value.indexOf(".", 0) < 0)
+{
+window.alert("Please enter a valid e-mail address.");
+email.focus();
+email.value="";
+return false;
+}
+
+
+
+//Mobileno Validation
+var no = document.form.phone.value;
+if(no=="")
+{
+alert("Please enter the Contact Number");
+document.form.phone.focus();
+return false;
+}
+if(isNaN(no))
+{
+alert("Enter the valid Mobile Number(Like : 9566137117)");
+document.form.phone.focus();
+return false;
+}
+if((no.length < 1) || (no.length > 10))
+{
+alert(" Your Mobile Number must be 1 to 10 Integers");
+document.form.phone.select();
+return false;
+}
+
+//Gender Validation
+
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+
+
+//Address Validation
+
+var ad = document.form.address.value;
+if(ad=="")
+{
+alert("please Enter the address details");
+document.form.address.focus();
+return false;
+}
+if((ad.length < 20) || (ad.length > 100))
+{
+alert(" Your textarea must be 20 to 100 characters");
+document.form.address.select();
+return false;
+}
+
+
+alert("Form is Submitted Successfully!!!")
+}
+
+</script>
+</head>
+
+<div>
+<body>
+<form name="form" method="post" onsubmit="return validation()">
+<h1 style="color:red;text-decoration-line:underline";>
+Registration Form
+</h1><table>
+<tr>
+<td>UserName:-</td><td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td>Password:-</td><td><input type="password" name="pass"></td>
+</tr>
+<tr>
+<td>Email-:-</td><td><input type="text" name="Email"></td>
+</tr>
+<tr>
+<td>Mobile No:-</td><td><input type="text" name="phone"></td>
+</tr>
+<tr>
+<td>Your Gender:-</td><td><input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female</td>
+</tr>
+<tr>
+<td>Address:-</td>
+<td><textarea name="address" cols="30" rows="2"></textarea></td>
+</tr>
+<tr><td>
+<input type="submit" name="sub" value="Submit"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
