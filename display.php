@@ -1,14 +1,13 @@
 <?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
+
 $link = mysqli_connect("localhost:3307", "root", "", "demo");
  
-// Check connection
+
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
  $id = mysqli_real_escape_string($link, $_POST['id']);
-// Attempt select query execution
+
 $sql = "SELECT * FROM persons WHERE id='$id'";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
@@ -28,7 +27,7 @@ if($result = mysqli_query($link, $sql)){
             echo "</tr>";
         }
         echo "</table>";
-        // Close result set
+        
         mysqli_free_result($result);
     } else{
         echo "No records matching your query were found.";
@@ -37,6 +36,6 @@ if($result = mysqli_query($link, $sql)){
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
  
-// Close connection
+
 mysqli_close($link);
 ?>
