@@ -1,6 +1,8 @@
 <?php
 
-$link = mysqli_connect("localhost:3307", "root", "", "demo");
+
+
+$link = mysqli_connect("localhost:3307", "root", "", "register");
  
 
 if($link === false){
@@ -19,3 +21,6 @@ if(mysqli_query($link, $sql)){
 
 mysqli_close($link);
 ?>
+
+
+
