@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+x=0;
+$(".nbutton").click(function(){
+x=(x<=300)?(x+100):0;
+$('figure').css('left',-x+"%")
+
+});
+
+$(".pbutton").click(function(){
+x=(x>=100)?(x-100):400;
+$('figure').css('left',-x+"%")
+
+});
+
+});
+</script>
+
+
+<style>
+.slider{
+	width:90%;
+	height:600px;
+	margin:50px auto;
+	position:relative;
+	box-shadow:0px opx 10px 3px grey;
+	overflow:hidden;
+	border:5px solid blue;
+	
+	}
+.slider figure{
+	margin:0px;
+	position:relative;
+	width:500%;
+	left:0px;
+	
+	}
+.slider figure img{
+	height:100%;
+	width:20%;
+	float:left;
+	}
+.pbutton, .nbutton{
+	position:absolute;
+	top:40%;
+	cursor:pointer;
+	color:white;
+	background:grey;
+	padding:20px;
+	font-size:50px;
+	border:none;
+	}
+	
+	.nbutton{
+		right:0px;
+		}
+		
+	.pbutton{
+		left:0px;
+		}
+	
+	
+	
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+
+<figure>
+<img src="D:\Sonal\jquery\n1.jpg">
+<img src="D:\Sonal\jquery\n2.jpg">
+<img src="D:\Sonal\jquery\n3.jpg">
+<img src="D:\Sonal\jquery\n4.jpg">
+<img src="D:\Sonal\jquery\n5.jpg">
+</figure>
+
+<button class="pbutton"><</button>
+<button class="nbutton">></button>
+
+</div>
+</body>
+</html>
