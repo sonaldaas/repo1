@@ -9,7 +9,7 @@
  border-radius: 5px;
   height: 80px;
   width: 80px;
-  background-color: blue;
+  background-color:#000080;
 
 }
 .square2{
@@ -18,38 +18,34 @@
   width: 400px;
   background-color: orange;
 }
-.margin2
-{
-	margin-left:110px;
-	margin-top:40px;
-}
+
 
 .margin1
 {
-	margin-left:10px;
-}
-.margin{
- 
-  margin-right: 40px;
-  margin-left: 40px;
-  margin-bottom: 40px;
+	margin-top:70px;
 }
 
+
 .corners1 {
-  border-radius: 15px;
-  background: orange;
+  border-radius: 5px;
+  background:#FFDAB9;
   padding: 20px; 
   width: 400px;
   height: 250px;  
   margin-left:110px;
-	
+
 }
 .corners2 {
-  border-radius: 15px;
-  background: blue;
+  border-radius: 5px;
+  background: #87CEFA;
   padding: 20px; 
   width: 400px;
   height: 250px;  
   margin-left:110px;
+ float:right;
 	
+}
+.direction{
+	 display: flex;
+  flex-direction:row;
 }
