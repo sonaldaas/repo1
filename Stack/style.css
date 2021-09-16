@@ -1,1 +1,58 @@
+.square {
+	 border-radius: 5px;
+  height: 750px;
+  width: 1250px;
+  background-color: #555;
 
+}
+.square1 {
+ border-radius: 5px;
+  height: 80px;
+  width: 80px;
+  background-color: blue;
+
+}
+.square2{
+	 border-radius: 5px;
+  height:250px;
+  width: 400px;
+  background-color: orange;
+}
+.margin2
+{
+	margin-left:110px;
+	margin-top:40px;
+}
+
+.margin1
+{
+	margin-left:10px;
+}
+.margin{
+ 
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.corners1 {
+  border-radius: 15px;
+  background: orange;
+  padding: 20px; 
+  width: 400px;
+  height: 250px;  
+  margin-left:110px;
+	
+}
+.corners2 {
+  border-radius: 15px;
+  background: blue;
+  padding: 20px; 
+  width: 400px;
+  height: 250px;  
+  margin-left:110px;
+	
+}
+.boxes {
+  text-align: center;
+}
